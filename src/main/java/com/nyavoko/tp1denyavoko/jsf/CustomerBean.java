@@ -19,25 +19,26 @@ import java.util.List;
 @Named(value = "customerBean")
 @ViewScoped
 public class CustomerBean implements Serializable {
+
     private List<Customer> customerList;
 
     @Inject
     private CustomerManager customerManager;
-   
-    
+
     /**
      * Creates a new instance of CustomerBean
      */
     public CustomerBean() {
     }
-    /** 
-   * Retourne la liste des clients pour affichage dans une DataTable.
-     * @return 
-   */  
-    public List<Customer> getCustomers(){
-        if(customerList == null){
+
+    /**
+     * Retourne la liste des clients pour affichage dans une DataTable.
+     */
+    public List<Customer> getCustomers() {
+        if (customerList == null) {
             customerList = customerManager.getAllCustomers();
         }
         return customerList;
     }
+
 }

@@ -19,8 +19,7 @@ import java.util.List;
 /**
  *
  * @author Avoko
- */
-@Named
+ */@Named
 @ViewScoped
 public class CustomerDetailsBean implements Serializable {
 

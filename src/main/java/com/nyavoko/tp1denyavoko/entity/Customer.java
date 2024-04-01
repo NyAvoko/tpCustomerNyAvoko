@@ -23,7 +23,7 @@ import java.io.Serializable;
  * @author Avoko
  */
 @Entity
-@Table(name = "customer")
+@Table(name = "CUSTOMER")
 @XmlRootElement
 @NamedQueries({
     @NamedQuery(name = "Customer.findAll", query = "SELECT c FROM Customer c"),
@@ -206,7 +206,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "com.nyavoko.tp1denyavoko.entity.Customer[ customerId=" + customerId + " ]";
+        return "mg.manolotsoa.tpCustomerRazafindrakotoManolotsoaDaniel54.entity.Customer[ customerId=" + customerId + " ]";
     }
     
 }
