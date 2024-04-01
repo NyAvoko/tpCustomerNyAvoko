@@ -3,15 +3,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="jakarta.faces.html"
       xmlns:f="jakarta.faces.core">
-
     <f:metadata>
         <f:viewParam name="idCustomer" value="#{customerDetailsBean.idCustomer}"
                      required="true"/>
         <f:viewAction action="#{customerDetailsBean.loadCustomer}"/>
     </f:metadata>
-
     <h:head>
-        <title>Details  d'un client</title>
+        <title>Détails d'un client</title>
     </h:head>
     <h:body>
         <f:view>
