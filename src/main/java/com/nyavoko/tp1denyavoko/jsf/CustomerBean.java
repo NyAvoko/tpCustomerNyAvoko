@@ -6,7 +6,6 @@ package com.nyavoko.tp1denyavoko.jsf;
 
 import com.nyavoko.tp1denyavoko.entity.Customer;
 import com.nyavoko.tp1denyavoko.service.CustomerManager;
-import com.nyavoko.tp1denyavoko.service.DiscountManager;
 import jakarta.inject.Named;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Inject;
@@ -24,7 +23,7 @@ public class CustomerBean implements Serializable {
 
     @Inject
     private CustomerManager customerManager;
-    private DiscountManager discountManager;
+   
     
     /**
      * Creates a new instance of CustomerBean

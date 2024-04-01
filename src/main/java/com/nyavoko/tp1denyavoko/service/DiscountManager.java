@@ -4,7 +4,6 @@
  */
 package com.nyavoko.tp1denyavoko.service;
 
-import com.nyavoko.tp1denyavoko.entity.Customer;
 import com.nyavoko.tp1denyavoko.entity.Discount;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.persistence.EntityManager;
@@ -13,14 +12,15 @@ import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
 import java.util.List;
 
+
 /**
  *
- * @author Avoko
+ * @author Avoko NIVOARISON
  */
 @RequestScoped
 public class DiscountManager {
 
-    @PersistenceContext(unitName = "discountPU")
+    @PersistenceContext(unitName = "customerPU")
     private EntityManager em;
 
     public List<Discount> getAllDiscounts() {
@@ -28,11 +28,16 @@ public class DiscountManager {
         return query.getResultList();
     }
 
-     @Transactional
+    @Transactional
     public Discount update(Discount discount) {
-        return null;
+        return em.merge(discount);
     }
-    
+
+    @Transactional
+    public void persist(Discount discount) {
+        em.persist(discount);
+    }
+
     public Discount findById(String code) {
         return em.find(Discount.class, code);
     }
